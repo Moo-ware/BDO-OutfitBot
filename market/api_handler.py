@@ -80,7 +80,7 @@ class APIHandler:
     async def login(self):
         # This function will login to the marketplace using the provided email and password.
         # We first need to get the PA-STATE cookie from the login page, then we can use it to login.
-        
+        self.session = requests.Session()
         headers = {
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36"
         }
@@ -140,6 +140,7 @@ class APIHandler:
                     print(f"Bought {item[0]} for {item[2]} silver.")
                     i += 1
                 elif response_json['resultCode'] == 2000:
+                    print("Login session expired. Attempting to login again...")
                     self.login()
                 else:
                     print(f"Unexpected resultCode: {response_json}")
