@@ -98,23 +98,21 @@ class mainMenu():
                 if data['email'] and data['password']:
                     self.api_handler.email = data['email']
                     self.api_handler.password = data['password']
-                    return ("Credential Status: " + Back.GREEN + "Set" + Style.RESET_ALL)
+                    return ("Credential Status:    " + Fore.GREEN + "Set" + Style.RESET_ALL)
                 else:
                     return ("Credential Status: " + Back.RED + "Not Set" + Style.RESET_ALL)
         except FileNotFoundError:
-            return ("Credential Status: " + Back.RED + "Not Set" + Style.RESET_ALL)
+            return ("Credential Status:    " + Fore.RED + "Not Set" + Style.RESET_ALL)
         except json.JSONDecodeError:
-            return ("Credential Status: " + Back.RED + "Not Set" + Style.RESET_ALL)
+            return ("Credential Status:    " + Fore.RED + "Not Set" + Style.RESET_ALL)
 
 
     async def current_delay(self):
         return ("Current delay:        [" + self.task_manager.delay_choices[self.task_manager.delay][0] + "]")
 
     async def mp_inventory(self):
-        print(self.task_manager.sleep_duration)
-        """print(await self.api_handler.is_session_expired())
         r = await self.api_handler.get_mp_inventory()
-        print(r)"""
+        print(r)
 
     
     # Exit the program
