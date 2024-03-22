@@ -1,9 +1,9 @@
 ![sniper](https://github.com/Moo-ware/BDO-Outfit-Bot/assets/56319809/a578d909-45c4-4cb6-b385-7274a47d1659)
 ## DISCLAIMER
-This program is just for educational purposes. I am **NOT** responsible if you use this and get banned.
+This program is for educational purposes only. I am **NOT** responsible if you use it and gets banned.
 
 ## About the project
-Just a little program I made for the game *Black Desert Online*, that will automatically buy any outfits listed on the central marketplace, faster than manual. I mainly made this as a proof of concept.
+Just a little test program I made for the game *Black Desert Online*, that will automatically buy any outfits listed on the central marketplace, faster than manual. I mainly made this as a proof of concept.
 
 
 ### How it works
@@ -11,9 +11,12 @@ When enabled, the program will continuously check for outfit stock, with a pre s
 
 
 For the buying to work, the program will need your login credentials to login to the [official](https://na-trade.naeu.playblackdesert.com/Intro/) BDO web-marketplace. Your credentials are then saved locally, and the program will auto-relogin for you if the login expires. This means that the program will work indefinitely as long as you keep it running.
-### Supported Versions
-Currently, steam accounts and OTP enabled accounts are **NOT SUPPORTED**. Only launcher accounts with no OTP.
 
+### **Supported Versions**
+Currently, steam accounts and OTP enabled accounts are **NOT SUPPORTED**. Only launcher accounts with no OTP is supported.
+
+## Issues
+Program is still in BETA, so there will most likely be some issues or bugs. Please let me know if you found any.
 
 ## Getting Started
 Follow these steps for installation.
