@@ -92,14 +92,19 @@ class mainMenu():
     
     # Load credentials
     async def load_credentials(self):
-        with open('resources/info.json', 'r') as file:
-            data = json.load(file)
-            if data['email'] and data['password']:
-                self.api_handler.email = data['email']
-                self.api_handler.password = data['password']
-                return ("Credential Status:    " + Fore.GREEN + "Set" + Style.RESET_ALL)
-            else:
-                return ("Credential Status:    " + Fore.RED + "Not Set" + Style.RESET_ALL)
+        try:
+            with open('resources/info.json', 'r') as file:
+                data = json.load(file)
+                if data['email'] and data['password']:
+                    self.api_handler.email = data['email']
+                    self.api_handler.password = data['password']
+                    return ("Credential Status: " + Back.GREEN + "Set" + Style.RESET_ALL)
+                else:
+                    return ("Credential Status: " + Back.RED + "Not Set" + Style.RESET_ALL)
+        except FileNotFoundError:
+            return ("Credential Status: " + Back.RED + "Not Set" + Style.RESET_ALL)
+        except json.JSONDecodeError:
+            return ("Credential Status: " + Back.RED + "Not Set" + Style.RESET_ALL)
 
 
     async def current_delay(self):
@@ -226,10 +231,9 @@ class backgroundTasks():
                 print("Item in stock. Attempting to buy.....")
                 await self.buy_item(buyList)
             else:
-                print("No item in stock") # This is a testing statement only
+                None # This is a testing statement only
             
             sleep_duration = random.uniform(*self.delay_choices[self.delay][1])
-            print(f"Sleeping for {sleep_duration} seconds.")
             await asyncio.sleep(sleep_duration)
             
     
@@ -283,6 +287,7 @@ class backgroundTasks():
                 if status == 1:
                     print("Login successful.")
                     self.api_handler.login_status = True
+                    self.api_handler.save_session()
                     asyncio.create_task(self.login_status_checker())
                 else:
                     print("Login failed.")

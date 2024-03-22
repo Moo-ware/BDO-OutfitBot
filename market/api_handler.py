@@ -98,12 +98,11 @@ class APIHandler:
         response_login = self.session.post(url=self.login_url, data=login_payload, headers=headers)
         login_cookie = response_login.request._cookies.get_dict()
         try:
-            login_cookie['TradeAuth_Session'] 
-            login_cookie['__RequestVerificationToken']
+            login_cookie['AuthorizeOauthInfo'] 
         except KeyError:
-            return 0
+            return 1 # Login successful
         else:
-            return 1
+            return 0 # Login failed
     
     async def buy_item(self, buyList):
         # This function will buy the items in the buyList.
