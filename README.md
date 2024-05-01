@@ -2,6 +2,9 @@
 ## DISCLAIMER
 This program is for educational purposes only. I am **NOT** responsible if you use it and gets banned.
 
+## **Supported Versions**
+Currently, steam accounts and OTP enabled accounts are **NOT SUPPORTED**. Only launcher accounts with no OTP is supported. Links are set to NA but can be changed to other regions.
+
 ## About the project
 Just a little test program I made for the game *Black Desert Online*, that will automatically buy any outfits listed on the central marketplace, faster than manual. I mainly made this as a proof of concept.
 
@@ -12,8 +15,6 @@ When enabled, the program will continuously check for outfit stock, with a pre s
 
 For the buying to work, the program will need your login credentials to login to the [official](https://na-trade.naeu.playblackdesert.com/Intro/) BDO web-marketplace. Your credentials are then saved locally, and the program will auto-relogin for you if the login expires. This means that the program will work indefinitely as long as you keep it running.
 
-### **Supported Versions**
-Currently, steam accounts and OTP enabled accounts are **NOT SUPPORTED**. Only launcher accounts with no OTP is supported.
 
 ## Issues
 Program is still in BETA, so there will most likely be some issues or bugs. Please let me know if you found any.
