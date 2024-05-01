@@ -1,4 +1,5 @@
-![sniper](https://github.com/Moo-ware/BDO-Outfit-Bot/assets/56319809/a578d909-45c4-4cb6-b385-7274a47d1659)
+![315768101-a578d909-45c4-4cb6-b385-7274a47d1659](https://github.com/Moo-ware/BDO-OutfitBot/assets/56319809/23157a97-7b80-4274-80c0-68b406f92ec2)
+
 ## DISCLAIMER
 I mainly made this as a proof of concept, and is for educational purposes only. Therefore I am **NOT** responsible if you use it and gets banned.
 
