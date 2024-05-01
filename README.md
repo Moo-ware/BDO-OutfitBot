@@ -10,7 +10,7 @@ Just a little test program I made for the game *Black Desert Online*, that will 
 
 
 ### How it works
-When enabled, the program will continuously check for outfit stock, with a pre set delay. When outfits are detected, the program will automatically buys it for you.
+When enabled, the program will continuously check for outfit stock, with a pre set delay. When outfits are detected, the program will automatically buy it for you.
 
 
 For the buying to work, the program will need your login credentials to login to the [official](https://na-trade.naeu.playblackdesert.com/Intro/) BDO web-marketplace. Your credentials are then saved locally, and the program will auto-relogin for you if the login expires. This means that the program will work indefinitely as long as you keep it running.
