@@ -17,7 +17,7 @@ For the buying to work, the program will need your login credentials to login to
 
 
 ## Issues
-Program is still in BETA, so there will most likely be some issues or bugs. Please let me know if you found any.
+Program is still in BETA, so there will most likely be some issues or bugs. Please let me know if you found any on discord `._.__.__._._.__._____.__._.___.` (Yes this is the username)
 
 ## Getting Started
 Follow these steps for installation.
