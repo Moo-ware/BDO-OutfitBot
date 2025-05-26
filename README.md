@@ -7,7 +7,7 @@ I mainly made this as a proof of concept, and is for educational purposes only. 
 Currently, steam accounts and OTP enabled accounts are **NOT SUPPORTED**. Only launcher accounts with no OTP is supported. Support could be easily added but I mostly likely won't do it because is against TOS.
 
 ## About the project
-Just a little test program I made for the game *Black Desert Online*, that will automatically and instantly buy any outfits listed on the central marketplace. I am still learning so there probably will be plenty of bugs :)
+Program I made for the game *Black Desert Online*, that will automatically and instantly buy any outfits listed on the central marketplace. I am still learning so there probably will be plenty of bugs :)
 
 
 ### How it works
