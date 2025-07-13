@@ -6,13 +6,13 @@ import random
 
 class mainMenu():
     def __init__(self, task_manager, api_handler):
-        self.main_art = """
+        self.main_art = r"""
  ___ ___   ____  ____   __  _    ___ ______       _____ ____   ____  ____   ___  ____  
 |   |   | /    ||    \ |  |/ ]  /  _]      |     / ___/|    \ |    ||    \ /  _]|    \ 
 | _   _ ||  o  ||  D  )|  ' /  /  [_|      |    (   \_ |  _  | |  | |  o  )  [_ |  D  )
 |  \_/  ||     ||    / |    \ |    _]_|  |_|     \__  ||  |  | |  | |   _/    _]|    / 
 |   |   ||  _  ||    \ |     \|   [_  |  |       /  \ ||  |  | |  | |  | |   [_ |    \ 
-|   |   ||  |  ||  .  \|  .  ||     | |  |       \    ||  |  | |  | |  | |     ||  .  \\
+|   |   ||  |  ||  .  \|  .  ||     | |  |       \    ||  |  | |  | |  | |     ||  .  \
 |___|___||__|__||__|\_||__|\_||_____| |__|        \___||__|__||____||__| |_____||__|\_|
                                                                                        
                             @@@@@@@@@@@@@@@                         
@@ -185,9 +185,9 @@ class backgroundTasks():
         self.checker_task = None
         self.checker_enabled = False
         self.delay_choices = {
-            "1": ("Ludicrous", (1.5, 3)),
-            "2": ("Moderate", (3, 6)),
-            "3": ("Slow", (6, 9))
+            "1": ("Ludicrous", (3, 5)),
+            "2": ("Moderate", (5, 10)),
+            "3": ("Slow", (15, 30))
         }
         self.delay = "3"
 
@@ -262,20 +262,20 @@ class backgroundTasks():
     async def price_calc(self, buyList):
         modifiedList = buyList.copy()
         for item in modifiedList:
-            if item[2] == "1520000000":
-                item[2] = "1630000000"
-            elif item[2] == "1220000000":
-                item[2] = "1310000000"
+            if item[2] == "2020000000": # Base Price for premium outfits
+                item[2] = "2170000000"  # Maximum price for premium outfits
+            elif item[2] == "1630000000": # Base Price for Classic outfits
+                item[2] = "1750000000"  # Maximum price for Classic outfits
             elif item[2] == "25200": # This is a testing case only
                 item[2] = "25200"
             else:
-                item[2] = "885000000"
+                item[2] = "1180000000" # Maximum price for the rest of the outfits
         return modifiedList
     
     # Login to the marketplace
     async def login(self):
         status = await self.api_handler.is_session_expired()
-        if status == 0:
+        if status == 1:
             print("Last session is still valid.")
             self.api_handler.login_status = True
             asyncio.create_task(self.login_status_checker())
@@ -292,6 +292,16 @@ class backgroundTasks():
             else:
                 print("Please set your credentials first.")
                 return
+    
+    # Initial login status checker
+    async def initial_login_check(self):
+        status = await self.api_handler.is_session_expired()
+        if status == 0:
+            print("Session is valid.")
+            self.api_handler.login_status = True
+        else:
+            print("Session is invalid or expired.")
+            self.api_handler.login_status = False
 
     # Constantly check the login status every 30 minutes
     async def login_status_checker(self):

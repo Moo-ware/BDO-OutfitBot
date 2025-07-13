@@ -153,3 +153,5 @@ cython_debug/
 
 *.pkl
 *.json
+test.py
+response.py
