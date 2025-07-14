@@ -299,6 +299,8 @@ class backgroundTasks():
         if status == 0:
             print("Session is valid.")
             self.api_handler.login_status = True
+            asyncio.create_task(self.login_status_checker())
+            print("Login status checker started.")
         else:
             print("Session is invalid or expired.")
             self.api_handler.login_status = False

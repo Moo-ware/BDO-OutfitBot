@@ -92,7 +92,7 @@ class APIHandler:
         loginPage = response_loginPage.request._cookies.get_dict()
         pastate = loginPage['PA-STATE']
 
-        # Now we can create the login payload using the PA-STATE
+        # Create the login payload using the PA-STATE
         login_payload = {
             "hdAccountUrl": "https://account.pearlabyss.com",
             "_isLinkingLogin": "false",
