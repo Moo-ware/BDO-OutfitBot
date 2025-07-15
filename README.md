@@ -4,6 +4,8 @@
 I mainly made this as a proof of concept, and it is for educational purposes only. Therefore, I am **NOT** responsible if you use it and get banned.
 
 ## **Supported Versions**
+WORKING AS OF 7/14/25. If you are having problems, please message me on Discord (see below)
+
 Currently, Steam accounts and OTP enabled accounts are **NOT SUPPORTED**. Only launcher accounts with no OTP are supported. Steam is WIP.
 
 ## About the project
@@ -20,7 +22,7 @@ For the buying to work, the program will need your login credentials to log in t
 decoder.py is by [shrddr](https://github.com/shrddr/huffman_heap)
 
 ## Contact me
-Please let me know if you have any questions/suggestions on discord: `._.__.__._._.__._____.__._.___.` (Yes this is the username)
+For questions or bug reports, please message me on Discord: `._.__.__._._.__._____.__._.___.` (Yes this is the username)
 
 ## WIP / TODO ##
 - Better security
