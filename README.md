@@ -19,7 +19,7 @@ When enabled, the program will continuously check the outfit category for stock,
 For the buying to work, the program will need your login credentials to log in to the [official](https://na-trade.naeu.playblackdesert.com/Intro/) BDO web marketplace. Your credentials are then saved locally, and the program will auto-relogin for you if the login expires. This means that the program will work indefinitely (though not recommended) as long as you keep it running.
 
 ## Known Issues
-If your IP reputation is low, you will encounter CAPTCHAs that the bot currently will not bypass. If you are having issues logging in, this is most likely the issue. To confirm, try logging in manually on the BDO website and see if you get prompted by CAPTCHA.
+If your IP reputation is low, you will encounter CAPTCHAs that the program currently will not bypass. If you are having issues logging in, this is most likely the issue. To confirm, try logging in manually on [BDO website](https://www.naeu.playblackdesert.com/en-US/Main/Index) and see if you get prompted by CAPTCHA.
 
 ## Credits
 decoder.py is by [shrddr](https://github.com/shrddr/huffman_heap)
