@@ -155,3 +155,4 @@ cython_debug/
 *.json
 test.py
 response.py
+ping.py

@@ -158,7 +158,13 @@ class APIHandler:
                     i += 1
                 elif response_json['resultCode'] == 2000:
                     print("Login session expired. Attempting to login again...")
-                    self.login()
+                    success = await self.login()
+                    if success == 1:
+                        print("Re-login successful.")
+                        continue
+                    else:
+                        print("Re-login failed.")
+                        break
                 else:
                     print(f"Unexpected resultCode: {response_json} when trying to buy {item[0]} for {item[2]} silver.")
                     break  # Break from the while loop if unexpected resultCode
