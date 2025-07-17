@@ -89,7 +89,7 @@ def decode(tree, freqs, packed, bits, verbose=False, check_stats=False):
     p = p[:bits]
     if verbose:
         print(p.bin)
-    unpacked = ''
+    unpacked = []
     pos = 0
     while pos < len(p):
         node = tree
@@ -106,7 +106,7 @@ def decode(tree, freqs, packed, bits, verbose=False, check_stats=False):
                 raise ValueError(f'invalid tree: dead end while walking, {unpacked=}')
             if node.left is None and node.right is None:
                 break
-        unpacked += node.c
+        unpacked.append(node.c)
 
     if check_stats:
         stats = Counter(unpacked)
@@ -114,7 +114,7 @@ def decode(tree, freqs, packed, bits, verbose=False, check_stats=False):
             if stats[c] != f:
                 raise ValueError(f"incorrect '{c}' freq: header={f} processed={stats[c]}, {unpacked=}")
 
-    return unpacked
+    return ''.join(unpacked)
 
 
 def read(file, fmt):
