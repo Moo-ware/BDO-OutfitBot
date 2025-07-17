@@ -160,7 +160,7 @@ class APIHandler:
                     print("Login session expired. Attempting to login again...")
                     self.login()
                 else:
-                    print(f"Unexpected resultCode: {response_json}")
+                    print(f"Unexpected resultCode: {response_json} when trying to buy {item[0]} for {item[2]} silver.")
                     break  # Break from the while loop if unexpected resultCode
 
                 await asyncio.sleep(random.uniform(1, 2.5))  # Sleep for 1 - 2.5 second between each buy to avoid looking suspicious.
