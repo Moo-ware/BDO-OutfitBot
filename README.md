@@ -21,6 +21,8 @@ For the buying to work, the program will need your login credentials to log in t
 ## Known Issues
 If your IP reputation is low, you will encounter CAPTCHAs that the program currently will not bypass. If you are having issues logging in, this is most likely the issue. To confirm, try logging in manually on [BDO website](https://www.naeu.playblackdesert.com/en-US/Main/Index) and see if you get prompted by CAPTCHA.
 
+If you see an unexpected result code 34 when attempting to buy, it is normal. It just means it is trying to place a pre-order when you already have an existing pre-order for an outfit.
+
 ## Credits
 decoder.py is by [shrddr](https://github.com/shrddr/huffman_heap)
 
