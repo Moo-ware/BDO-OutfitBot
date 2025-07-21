@@ -23,7 +23,7 @@ If your IP reputation is low, you will encounter CAPTCHAs that the program curre
 
 If you encounter `unexpected result code 34` when attempting to make a purchase, it is normal. It simply means that the outfit has gone out of stock, and it is trying to place a pre-order for it when you already have an existing pre-order.
 
-`unexpected result code -14` means price mismatch, most commonly caused by an outfit not being listed at the capped price. 
+`unexpected result code -14` means price mismatch; it is trying to buy an outfit at a non-existent price. This error will appear either when PA raises the max price of outfits or when an outfit that hasn't reached its max price yet is listed. 
 
 ## Credits
 decoder.py is by [shrddr](https://github.com/shrddr/huffman_heap)
